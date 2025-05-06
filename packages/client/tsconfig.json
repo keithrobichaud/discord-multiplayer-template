@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "Bundler", // or "NodeNext"
+    "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    /* Vite specific */
+    "types": ["vite/client"],
+    "isolatedModules": true, // Often needed with Vite/esbuild
+    "baseUrl": ".", // Needed for path mapping
+    "paths": {
+      "@server/*": ["../server/src/*"] // Add this path alias
+    }
+  },
+  "include": ["src", "d.ts"], // Include source files and the declaration file
+  "references": [] // Add references if using project references
+}

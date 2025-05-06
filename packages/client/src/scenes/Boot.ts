@@ -11,7 +11,6 @@ export class Boot extends Scene {
 
     this.load.setPath("/.proxy/assets");
     this.load.image("background", "bg.png");
-    this.load.image("fridge_bg", "fridge_bg.png");
   }
 
   create() {

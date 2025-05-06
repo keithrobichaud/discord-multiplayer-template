@@ -18,6 +18,13 @@ import { Background } from "./scenes/Background";
     backgroundColor: "#000000",
     roundPixels: false,
     pixelArt: false,
+    physics: {
+      default: 'arcade',
+      arcade: {
+        gravity: { x: 0, y: 300 },
+        debug: true
+      }
+    },
     scene: [Boot, Preloader, MainMenu, Game, Background],
   });
 })();

@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import path from 'path'; // Import path module
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
@@ -7,6 +8,12 @@ export default ({ mode }) => {
 
   return defineConfig({
     envDir: "../../",
+    // Add resolve alias
+    resolve: {
+      alias: {
+        '@server': path.resolve(__dirname, '../server/src'),
+      },
+    },
     build: {
       rollupOptions: {
         output: {
